@@ -17,7 +17,7 @@ export default function CoverSlide() {
         >
           <PitchLogo />
           <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>
-            Investor Deck
+            Pitch Deck
           </span>
         </div>
 

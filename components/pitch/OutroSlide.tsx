@@ -33,11 +33,11 @@ function XIcon({ size }: { size: string }) {
 }
 
 const contactItems = [
-  { icon: 'telegram', text: 'EmpowerToursEdu' },
-  { icon: 'discord', text: 'EmpowerTours Community' },
+  { icon: 'telegram', text: 'empowertourschat' },
+  { icon: 'discord', text: 'discord.gg/STMVhsxF' },
   { icon: 'x', text: '@EmpowerTours' },
-  { icon: 'mail', text: 'studio@empowertours.com' },
-  { icon: 'web', text: 'motionmint.xyz' },
+  { icon: 'mail', text: 'admin@empowertours.xyz' },
+  { icon: 'web', text: 'motionmint-production.up.railway.app' },
 ];
 
 export default function OutroSlide() {
@@ -51,7 +51,7 @@ export default function OutroSlide() {
           style={{ padding: 'clamp(16px, 2.5%, 40px) clamp(24px, 5.2%, 80px)' }}
         >
           <PitchLogo />
-          <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>Investor Deck</span>
+          <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>Pitch Deck</span>
           <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>Page 004</span>
         </div>
 
