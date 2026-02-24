@@ -37,7 +37,7 @@ const contactItems = [
   { icon: 'discord', text: 'EmpowerTours Community' },
   { icon: 'x', text: '@EmpowerTours' },
   { icon: 'mail', text: 'studio@empowertours.com' },
-  { icon: 'web', text: 'empowerstudio.xyz' },
+  { icon: 'web', text: 'motionmint.xyz' },
 ];
 
 export default function OutroSlide() {

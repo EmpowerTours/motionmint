@@ -61,7 +61,7 @@ export default function SolutionSlide() {
               marginTop: 'clamp(4px, 0.5%, 10px)',
             }}
           >
-            The EmpowerStudio Model
+            The MotionMint Model
           </h2>
         </div>
 

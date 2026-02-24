@@ -63,7 +63,7 @@ export default function ProblemSlide() {
                 use legacy stock video platforms with Web2 DRM and subscriptions.
               </p>
               <p style={{ fontSize: 'clamp(13px, 1.05vw, 20px)', opacity: 0.9, lineHeight: 1.5, marginTop: '3%' }}>
-                EmpowerStudio bridges this gap: AI-generated video backgrounds, sold
+                MotionMint bridges this gap: AI-generated video backgrounds, sold
                 individually with on-chain payment, streamed instantly via HLS.
                 No subscription. No DRM headaches. Pay once, stream forever.
               </p>

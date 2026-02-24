@@ -11,7 +11,7 @@ export default function Logo({ size = 'default' }: { size?: 'default' | 'large' 
       {/* Studio icon - play button in circle */}
       <circle cx="16" cy="16" r="13" stroke="url(#logoGrad)" strokeWidth="1.8" fill="none" />
       <path d="M13 10.5l9 5.5-9 5.5V10.5z" fill="url(#logoGrad)" />
-      {/* EMPOWERSTUDIO text */}
+      {/* MOTIONMINT text */}
       <text
         x="34"
         y="20"
@@ -21,7 +21,7 @@ export default function Logo({ size = 'default' }: { size?: 'default' | 'large' 
         fontFamily="'Plus Jakarta Sans', system-ui, sans-serif"
         letterSpacing="0.5"
       >
-        EMPOWERSTUDIO
+        MOTIONMINT
       </text>
       <defs>
         <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">

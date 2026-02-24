@@ -4,7 +4,7 @@ export default function PitchLogo() {
       <circle cx="16" cy="20" r="13" stroke="url(#pitchLogoGrad)" strokeWidth="1.8" fill="none" />
       <path d="M13 14l9 6-9 6V14z" fill="url(#pitchLogoGrad)" />
       <text x="34" y="24" fill="white" fontSize="14" fontWeight="700" fontFamily="'Plus Jakarta Sans', system-ui, sans-serif" letterSpacing="0.5">
-        EMPOWERSTUDIO
+        MOTIONMINT
       </text>
       <defs>
         <linearGradient id="pitchLogoGrad" x1="0" y1="0" x2="1" y2="1">

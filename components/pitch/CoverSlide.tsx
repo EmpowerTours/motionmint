@@ -38,7 +38,7 @@ export default function CoverSlide() {
               textAlign: 'center',
             }}
           >
-            EmpowerStudio
+            MotionMint
           </h1>
           <p
             style={{

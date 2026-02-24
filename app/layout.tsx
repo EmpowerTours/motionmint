@@ -3,7 +3,7 @@ import './globals.css';
 import Providers from '@/components/providers';
 
 export const metadata: Metadata = {
-  title: 'EmpowerStudio - AI Video Background Marketplace',
+  title: 'MotionMint - AI Video Background Marketplace',
   description: 'Premium AI-generated video backgrounds for presentations, streams, and creative projects. Powered by Monad.',
 };
 

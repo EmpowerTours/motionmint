@@ -18,7 +18,7 @@ export default function QuoteSlide() {
           style={{ maxWidth: '70%', gap: 12 }}
         >
           <p style={{ fontSize: 'clamp(14px, 1.2vw, 20px)', opacity: 0.9 }}>
-            EmpowerStudio
+            MotionMint
           </p>
           <blockquote
             style={{
