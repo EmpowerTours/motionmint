@@ -1,4 +1,4 @@
-export const VIDEO_BG_CONTRACT_ADDRESS = '0x8CAD2175b18F577CEE0730a84127789390A1d81B' as const;
+export const VIDEO_BG_CONTRACT_ADDRESS = '0x19B11a0520cA412A70F6Ba2c030DBa542Fc04A84' as const;
 
 export const VIDEO_BG_ABI = [
   { type: 'constructor', inputs: [{ name: '_wmon', type: 'address' }, { name: '_treasury', type: 'address' }], stateMutability: 'nonpayable' },
