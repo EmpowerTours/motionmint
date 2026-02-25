@@ -11,7 +11,7 @@ export default function QuoteSlide() {
 
       <div
         className="relative z-10 flex items-center justify-center w-full h-full"
-        style={{ color: 'white' }}
+        style={{ color: 'white', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px rgba(0,0,0,0.8)' }}
       >
         <div
           className="flex flex-col items-center text-center"
