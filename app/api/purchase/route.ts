@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     const res = await fetch(`${EC2_API_URL}/purchase`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ template_id, resolution, tx_hash, wallet }),
+      body: JSON.stringify({ template_id, resolution, tx_hash, wallet_address: wallet }),
     });
 
     const data = await res.json();
