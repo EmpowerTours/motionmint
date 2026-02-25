@@ -47,7 +47,6 @@ export default function SolutionSlide() {
         >
           <PitchLogo />
           <span />
-          <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>Page 002</span>
         </div>
 
         <div className="text-center" style={{ padding: '0 clamp(24px, 5.2%, 80px)' }}>

@@ -52,7 +52,6 @@ export default function OutroSlide() {
         >
           <PitchLogo />
           <span />
-          <span style={{ fontSize: 'clamp(12px, 1.05vw, 20px)', opacity: 0.8 }}>Page 004</span>
         </div>
 
         <div
