@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef, type ReactElement } from 'react';
 import { ChevronLeft, ChevronRight, Maximize, Minimize } from 'lucide-react';
+import { SlideActiveContext } from './VideoBackground';
 
 interface PresentationProps {
   slides: ReactElement[];
@@ -76,6 +77,24 @@ export default function Presentation({ slides }: PresentationProps) {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [showControls]);
 
+  // Touch swipe for mobile
+  const touchStartRef = useRef<number | null>(null);
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartRef.current = e.touches[0].clientX;
+  }, []);
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (touchStartRef.current === null) return;
+      const diff = touchStartRef.current - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goNext();
+        else goPrev();
+      }
+      touchStartRef.current = null;
+    },
+    [goNext, goPrev],
+  );
+
   useEffect(() => {
     hideTimerRef.current = setTimeout(() => setControlsVisible(false), 3000);
     return () => {
@@ -88,6 +107,8 @@ export default function Presentation({ slides }: PresentationProps) {
       ref={containerRef}
       className="relative w-screen h-screen overflow-hidden bg-black"
       style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {slides.map((slide, index) => {
         const isActive = index === currentSlide;
@@ -115,7 +136,9 @@ export default function Presentation({ slides }: PresentationProps) {
               zIndex: isActive ? 1 : 0,
             }}
           >
-            {slide}
+            <SlideActiveContext value={isActive}>
+              {slide}
+            </SlideActiveContext>
           </div>
         );
       })}
