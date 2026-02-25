@@ -19,8 +19,25 @@ export default function DashboardPage() {
     setLoading(true);
     fetch(`/api/user/${address}/purchases`)
       .then((r) => r.json())
-      .then((data) => {
-        setPurchases(data.purchases || []);
+      .then(async (data) => {
+        const rawPurchases: Purchase[] = data.purchases || [];
+        // Get stream tokens for each purchase
+        const withTokens = await Promise.all(
+          rawPurchases.map(async (p) => {
+            try {
+              const res = await fetch('/api/stream-token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ wallet: address, template_id: p.template_id, resolution: p.resolution }),
+              });
+              const tokenData = await res.json();
+              return { ...p, streamUrl: tokenData.streamUrl || p.hls_url };
+            } catch {
+              return { ...p, streamUrl: p.hls_url };
+            }
+          }),
+        );
+        setPurchases(withTokens);
         setLoading(false);
       })
       .catch(() => setLoading(false));

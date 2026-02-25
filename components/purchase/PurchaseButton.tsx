@@ -94,13 +94,18 @@ export default function PurchaseButton({
       });
 
       const data = await res.json();
-      if (data.hls_url) {
-        setStatus('success');
-        onSuccess(data.hls_url);
-      } else {
-        setStatus('success');
-        onSuccess(`/hls/templates/${templateId}/${resName}/index.m3u8`);
-      }
+
+      // Get authenticated stream token
+      const tokenRes = await fetch('/api/stream-token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ wallet: address, template_id: templateId, resolution: resName }),
+      });
+      const tokenData = await tokenRes.json();
+      const streamUrl = tokenData.streamUrl || data.hls_url || `/hls/templates/${templateId}/${resName}/index.m3u8`;
+
+      setStatus('success');
+      onSuccess(streamUrl);
     } catch (err) {
       setStatus('error');
       setError(err instanceof Error ? err.message : 'Transaction failed');

@@ -13,9 +13,9 @@ export default function PurchasedCard({ purchase }: PurchasedCardProps) {
   const [playing, setPlaying] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const hlsUrl = purchase.hls_url.startsWith('/hls')
-    ? purchase.hls_url
-    : `/hls/templates/${purchase.template_id}/${purchase.resolution}/index.m3u8`;
+  // Use authenticated stream URL if available, fall back to direct URL
+  const hlsUrl = purchase.streamUrl
+    || (purchase.hls_url.startsWith('/hls') ? purchase.hls_url : `/hls/templates/${purchase.template_id}/${purchase.resolution}/index.m3u8`);
 
   const templateName = purchase.template_id
     .split('-')

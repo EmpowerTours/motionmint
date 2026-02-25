@@ -50,4 +50,5 @@ export interface Purchase {
   wallet: string;
   purchased_at: string;
   hls_url: string;
+  streamUrl?: string;
 }
