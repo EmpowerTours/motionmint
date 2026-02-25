@@ -10,7 +10,7 @@ export default function ProblemSlide() {
     <div className="relative w-full h-full overflow-hidden bg-black">
       <VideoBackground src={VIDEO_SRC} />
 
-      <div className="relative z-10 flex flex-col w-full h-full" style={{ color: 'white' }}>
+      <div className="relative z-10 flex flex-col w-full h-full" style={{ color: 'white', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px rgba(0,0,0,0.8)' }}>
         <div
           className="flex items-center justify-between"
           style={{ padding: 'clamp(16px, 2.5%, 40px) clamp(24px, 5.2%, 80px)' }}
